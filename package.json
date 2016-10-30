@@ -1,0 +1,31 @@
+{
+  "name": "serverless-screenshot",
+  "version": "0.0.1",
+  "description": "Screenshot service which uses Serverless framework and AWS.",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingo-me/serverless-screenshot.git"
+  },
+  "keywords": [
+    "serverless",
+    "screenshot",
+    "lambda",
+    "s3",
+    "amazon"
+  ],
+  "author": "Ivan Radunovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codingo-me/serverless-screenshot/issues"
+  },
+  "homepage": "https://github.com/codingo-me/serverless-screenshot#readme",
+  "dependencies": {
+    "aws-sdk": "^2.6.12",
+    "dotenv": "^2.0.0",
+    "faker": "^3.1.0",
+    "valid-url": "^1.0.9"
+  }
+}

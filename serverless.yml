@@ -1,0 +1,28 @@
+service: screenshot
+
+custom:
+  stageVariables:
+    screenshotTimeout: 3000
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  stage: dev
+  profile: ${opt:profile}
+  apiKeys:
+    - app-api-key
+
+functions:
+  takeScreenshot:
+    handler: handler.takeScreenshot
+    timeout: 15
+    memorySize: 128
+    events:
+      - http:
+          path: screenshot
+          method: post
+          private: false
+          cors: true
+          request:
+            template:
+              application/json: '{ "url" : "$input.params(''url'')" }'
